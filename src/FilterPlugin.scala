@@ -100,6 +100,7 @@ object Plugin extends sbt.Plugin {
 
     def apply(log: Logger, files: Seq[File], props: Map[String, String]) {
       log debug ("Filter properties: %s" format (props.mkString("{", ", ", "}")))
+      Thread.sleep(java.util.concurrent.TimeUnit.SECONDS.toMillis(5))
       IO.withTemporaryDirectory { dir =>
         files foreach { src =>
           log debug ("Filtering %s" format src.absolutePath)
