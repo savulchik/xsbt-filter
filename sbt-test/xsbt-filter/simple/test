@@ -2,3 +2,5 @@
 > check-compile
 > test:copy-resources
 > check-test
+> check-jar
+
